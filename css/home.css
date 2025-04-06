@@ -1,0 +1,410 @@
+/* Общее */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#google_translate_element {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    top: 0 !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    width: 100%;
+}
+
+/* Навигация */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    font-family: "Tektur", sans-serif;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 15px;
+    background: rgb(193, 198, 201);
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #0a58ca;
+    color: white;
+}
+
+.menu li {
+    margin-left: 15px;
+    list-style: none;
+}
+
+.btn {
+    background: rgb(193,198,201);
+}
+
+/* Слайди */
+#carouselExample {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    height: 800px;
+    object-fit: contain;
+}
+
+.carousel-caption {
+    text-align: left;
+    left: 10%;
+    right: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    width: 25%;
+    min-height: 300px; /* Додаємо мінімальну висоту */
+}
+
+.carousel-caption h5 {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Медіа-запити для адаптивності слайдів */
+
+/* Для екранів з шириною до 768px (мобільні пристрої) */
+@media (max-width: 768px) {
+    #carouselExample {
+        height: 400px; /* Змінюємо висоту слайдів для мобільних */
+    }
+
+    .carousel-inner img {
+        height: 400px; /* Змінюємо висоту зображень слайдів */
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        width: 80%; /* Змінюємо ширину заголовка на слайді */
+        left: 10%;
+    }
+
+    .carousel-caption h5 {
+        font-size: 20px; /* Змінюємо розмір заголовка */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px; /* Змінюємо розмір параграфа */
+    }
+}
+
+/* Для екранів з шириною від 769px до 1200px (планшети) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    #carouselExample {
+        height: 500px; /* Змінюємо висоту слайдів для планшетів */
+    }
+
+    .carousel-inner img {
+        height: 500px; /* Змінюємо висоту зображень слайдів */
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        width: 50%; /* Змінюємо ширину заголовка на слайді */
+    }
+}
+/* 3 столба, Новини */
+.btn-primary {
+    color: black;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 200px;
+}
+
+.col-md-4 {
+    flex: 0 1 20%;
+    max-width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col-md-43 {
+    flex: 0 1 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card3 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body3 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 20px auto;
+}
+
+/* Текст фото */
+.ron {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ron h1 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 20px auto;
+}
+
+.col-md-8 {
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.custom-paragraph {
+    width: 50%;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.hero-img {
+    margin-left: -500px;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Подвал */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.rov {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    position: static;
+    width: 100%;
+    background-color: rgb(193,198,201);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-col {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-col h4 {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: black;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0a58ca
+}
+
+a {
+    text-decoration: none;
+}
+/* Медіа-запити для адаптивності підвалу */
+
+/* Для екранів з шириною до 768px (мобільні пристрої) */
+@media (max-width: 768px) {
+    .rov {
+        flex-direction: column; /* Змінюємо напрямок елементів на вертикальний */
+        align-items: center; /* Центруємо елементи по горизонталі */
+    }
+
+    .footer-col {
+        width: 100%; /* Займаємо всю ширину */
+        margin-bottom: 20px; /* Додаємо відступ між колонками */
+    }
+
+    .footer-col h4 {
+        font-size: 18px; /* Зменшуємо розмір заголовка */
+    }
+
+    .footer-col p, .footer-col li {
+        font-size: 14px; /* Зменшуємо розмір тексту */
+    }
+
+    .social-links a {
+        font-size: 18px; /* Зменшуємо розмір іконок */
+    }
+}
+
+/* Для екранів з шириною від 769px до 1200px (планшети) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .footer-col h4 {
+        font-size: 20px; /* Змінюємо розмір заголовка */
+    }
+
+    .footer-col p, .footer-col li {
+        font-size: 16px; /* Змінюємо розмір тексту */
+    }
+}
+
+/* Медіа-запити для адаптивності */
+
+/* Для екранів з шириною до 768px (мобільні пристрої) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .row {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .col-md-4, .col-md-43 {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .ron {
+        flex-direction: column;
+    }
+
+    .custom-paragraph {
+        width: 100%;
+    }
+
+    .hero-img {
+        margin-left: 0;
+    }
+}
+
+/* Для екранів з шириною від 769px до 1200px (планшети) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .row {
+        padding: 0 50px;
+    }
+}
